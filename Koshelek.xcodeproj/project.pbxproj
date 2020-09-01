@@ -7,37 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA5EC15824FE281A004BDE8F /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5EC15724FE2819004BDE8F /* RealmSwift.framework */; };
+		EA5EC15A24FE2825004BDE8F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5EC15924FE2825004BDE8F /* Realm.framework */; };
+		EA5EC15C24FE2834004BDE8F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA5EC15B24FE2834004BDE8F /* Alamofire.framework */; };
 		EAA85D2324F944B40030947A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D2224F944B40030947A /* AppDelegate.swift */; };
 		EAA85D2524F944B40030947A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D2424F944B40030947A /* SceneDelegate.swift */; };
 		EAA85D2724F944B40030947A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D2624F944B40030947A /* ViewController.swift */; };
 		EAA85D2A24F944B40030947A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA85D2824F944B40030947A /* Main.storyboard */; };
-		EAA85D2D24F944B40030947A /* Koshelek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D2B24F944B40030947A /* Koshelek.xcdatamodeld */; };
 		EAA85D2F24F944BA0030947A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAA85D2E24F944BA0030947A /* Assets.xcassets */; };
 		EAA85D3224F944BA0030947A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAA85D3024F944BA0030947A /* LaunchScreen.storyboard */; };
-		EAA85D3A24F94B770030947A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAA85D3924F94B770030947A /* Alamofire.framework */; };
 		EAA85D3C24F94BC50030947A /* Loaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D3B24F94BC50030947A /* Loaders.swift */; };
 		EAA85D3E24F94C460030947A /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D3D24F94C460030947A /* utilities.swift */; };
 		EAA85D4224F95AB00030947A /* BreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D4124F95AB00030947A /* BreedCell.swift */; };
 		EAA85D4424F96DEA0030947A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D4324F96DEA0030947A /* DetailsViewController.swift */; };
 		EAA85D4624F9778F0030947A /* SubBreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D4524F9778F0030947A /* SubBreedViewController.swift */; };
+		EAA85D4824FA4FD20030947A /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D4724FA4FD20030947A /* FavouritesViewController.swift */; };
+		EAA85D4A24FA50010030947A /* FavouritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D4924FA50010030947A /* FavouritesTableViewCell.swift */; };
+		EAA85D5024FAE4240030947A /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D4F24FAE4240030947A /* Persistance.swift */; };
+		EAA85D5224FBC85E0030947A /* alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D5124FBC85D0030947A /* alert.swift */; };
+		EAA85D5424FC2FA10030947A /* SubBreedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D5324FC2FA10030947A /* SubBreedCell.swift */; };
+		EAA85D5624FC360A0030947A /* FavouriteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA85D5524FC360A0030947A /* FavouriteDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA5EC15724FE2819004BDE8F /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		EA5EC15924FE2825004BDE8F /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = SOURCE_ROOT; };
+		EA5EC15B24FE2834004BDE8F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		EAA85D1F24F944B40030947A /* Koshelek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koshelek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAA85D2224F944B40030947A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAA85D2424F944B40030947A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EAA85D2624F944B40030947A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EAA85D2924F944B40030947A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EAA85D2C24F944B40030947A /* Koshelek.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Koshelek.xcdatamodel; sourceTree = "<group>"; };
 		EAA85D2E24F944BA0030947A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAA85D3124F944BA0030947A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAA85D3324F944BA0030947A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EAA85D3924F94B770030947A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		EAA85D3B24F94BC50030947A /* Loaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaders.swift; sourceTree = "<group>"; };
 		EAA85D3D24F94C460030947A /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
 		EAA85D4124F95AB00030947A /* BreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCell.swift; sourceTree = "<group>"; };
 		EAA85D4324F96DEA0030947A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		EAA85D4524F9778F0030947A /* SubBreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBreedViewController.swift; sourceTree = "<group>"; };
+		EAA85D4724FA4FD20030947A /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		EAA85D4924FA50010030947A /* FavouritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewCell.swift; sourceTree = "<group>"; };
+		EAA85D4F24FAE4240030947A /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		EAA85D5124FBC85D0030947A /* alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alert.swift; sourceTree = "<group>"; };
+		EAA85D5324FC2FA10030947A /* SubBreedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBreedCell.swift; sourceTree = "<group>"; };
+		EAA85D5524FC360A0030947A /* FavouriteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAA85D3A24F94B770030947A /* Alamofire.framework in Frameworks */,
+				EA5EC15A24FE2825004BDE8F /* Realm.framework in Frameworks */,
+				EA5EC15C24FE2834004BDE8F /* Alamofire.framework in Frameworks */,
+				EA5EC15824FE281A004BDE8F /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +71,7 @@
 		EAA85D1624F944B40030947A = {
 			isa = PBXGroup;
 			children = (
+				EAA85D4F24FAE4240030947A /* Persistance.swift */,
 				EAA85D2124F944B40030947A /* Koshelek */,
 				EAA85D2024F944B40030947A /* Products */,
 			);
@@ -78,13 +95,19 @@
 				EAA85D3B24F94BC50030947A /* Loaders.swift */,
 				EAA85D3D24F94C460030947A /* utilities.swift */,
 				EAA85D2824F944B40030947A /* Main.storyboard */,
+				EAA85D5524FC360A0030947A /* FavouriteDetailsViewController.swift */,
+				EAA85D5324FC2FA10030947A /* SubBreedCell.swift */,
+				EAA85D4924FA50010030947A /* FavouritesTableViewCell.swift */,
+				EAA85D4724FA4FD20030947A /* FavouritesViewController.swift */,
 				EAA85D4524F9778F0030947A /* SubBreedViewController.swift */,
+				EAA85D5124FBC85D0030947A /* alert.swift */,
 				EAA85D4324F96DEA0030947A /* DetailsViewController.swift */,
 				EAA85D2E24F944BA0030947A /* Assets.xcassets */,
 				EAA85D3024F944BA0030947A /* LaunchScreen.storyboard */,
 				EAA85D3324F944BA0030947A /* Info.plist */,
-				EAA85D2B24F944B40030947A /* Koshelek.xcdatamodeld */,
-				EAA85D3924F94B770030947A /* Alamofire.framework */,
+				EA5EC15B24FE2834004BDE8F /* Alamofire.framework */,
+				EA5EC15924FE2825004BDE8F /* Realm.framework */,
+				EA5EC15724FE2819004BDE8F /* RealmSwift.framework */,
 			);
 			path = Koshelek;
 			sourceTree = "<group>";
@@ -165,7 +188,9 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Alamofire.framework",
+				"$(SRCROOT)/Realm.framework",
+				"$(SRCROOT)/RealmSwift.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -185,12 +210,17 @@
 				EAA85D3E24F94C460030947A /* utilities.swift in Sources */,
 				EAA85D2724F944B40030947A /* ViewController.swift in Sources */,
 				EAA85D4224F95AB00030947A /* BreedCell.swift in Sources */,
+				EAA85D4A24FA50010030947A /* FavouritesTableViewCell.swift in Sources */,
 				EAA85D4624F9778F0030947A /* SubBreedViewController.swift in Sources */,
+				EAA85D5024FAE4240030947A /* Persistance.swift in Sources */,
 				EAA85D4424F96DEA0030947A /* DetailsViewController.swift in Sources */,
 				EAA85D2324F944B40030947A /* AppDelegate.swift in Sources */,
+				EAA85D5424FC2FA10030947A /* SubBreedCell.swift in Sources */,
 				EAA85D2524F944B40030947A /* SceneDelegate.swift in Sources */,
 				EAA85D3C24F94BC50030947A /* Loaders.swift in Sources */,
-				EAA85D2D24F944B40030947A /* Koshelek.xcdatamodeld in Sources */,
+				EAA85D5624FC360A0030947A /* FavouriteDetailsViewController.swift in Sources */,
+				EAA85D5224FBC85E0030947A /* alert.swift in Sources */,
+				EAA85D4824FA4FD20030947A /* FavouritesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +369,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Koshelek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,6 +392,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Koshelek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,19 +428,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		EAA85D2B24F944B40030947A /* Koshelek.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				EAA85D2C24F944B40030947A /* Koshelek.xcdatamodel */,
-			);
-			currentVersion = EAA85D2C24F944B40030947A /* Koshelek.xcdatamodel */;
-			path = Koshelek.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = EAA85D1724F944B40030947A /* Project object */;
 }

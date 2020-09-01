@@ -14,6 +14,7 @@ struct breedList{
 
 }
 
+
 struct Breed{
     let name: String?
     var types: [String]?
@@ -21,5 +22,31 @@ struct Breed{
 }
 
 struct Favourites{
-    var breeds: [Breed]
+    var breeds: [Breed]?
 }
+
+func isLiked(_ name: String, photo: String) -> Bool{
+    let FavouriteBreeds = Persistance.shared.allBreeds()
+    var isIn = false
+    for el in FavouriteBreeds{
+        if el.name == name{
+            for likedPhoto in el.likedPhotos{
+                if photo == likedPhoto{
+                    isIn = true
+                }
+            }
+        }
+    }
+    return isIn
+}
+
+
+func shareAlert() -> UIAlertController{
+    let alert = UIAlertController()
+    alert.addAction(UIAlertAction(title: "Share", style: .default) { (action: UIAlertAction) in
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default) { (action: UIAlertAction) in
+            alert.dismiss(animated: true)
+        })
+        return alert
+    }

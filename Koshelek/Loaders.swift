@@ -12,10 +12,13 @@ import UIKit
 
 
 class Loader{
-    func loadBreeds(completion: @escaping (breedList?) -> Void) {
+    func loadBreeds(completion: @escaping (breedList?, Bool, String?) -> Void) {
         var loadedBreeds = breedList(breeds: [])
+        var errorMessage = ""
+        var successful = false
         let url = URL(string: "https://dog.ceo/api/breeds/list/all")!
         AF.request(url).responseJSON{ response in
+            print("HI")
                 switch response.result{
                 case .success(let value):
                     if let json = value as? [String: Any] {
@@ -24,40 +27,54 @@ class Loader{
                             let breed = Breed(name: el.key, types: el.value as? [String])
                             loadedBreeds.breeds.append(breed)
                         }
+                        errorMessage = "successful"
+                        successful = true
                         }
-                    case .failure(let error):
-                        print(error)
+                    DispatchQueue.main.async {
+                        completion(loadedBreeds, successful, errorMessage)
                     }
-            DispatchQueue.main.async {
-                completion(loadedBreeds)
-            }
+                case .failure:
+                    print("error")
+                    errorMessage = "Request unsuccessful"
+                    successful = false
+                    DispatchQueue.main.async {
+                        completion(loadedBreeds, successful, errorMessage)
+                    }
+                    }
         }
     }
     
-    func loadImages( breed: String, completion: @escaping ([String]?) -> Void) {
+    func loadImages(_ breed: String,_ mainName: String, completion: @escaping ([String]?, Bool, String?) -> Void) {
         var loadedImages: [String] = []
-        print(breed)
-        let url = URL(string: "https://dog.ceo/api/breed/hound/images")!
-        print(url)
-        AF.request(url).responseJSON{ response in
+        var errorMessage = ""
+        var url: URL?
+        if mainName == ""{
+        url = URL(string: "https://dog.ceo/api/breed/\(breed)/images")!
+        }
+        else{
+            url = URL(string: "https://dog.ceo/api/breed/\(mainName)/\(breed)/images")!
+        }
+        AF.request(url!).responseJSON{ response in
                 switch response.result{
                 case .success(let value):
                     if let json = value as? [String: Any] {
-                        let list = json["message"] as? [String: Any]
-                        print(list!.keys)
+                        let list = json["message"] as? [String]
                         for el in list!{
-                            print(el.key)
-                            loadedImages.append(el.key)
+                            loadedImages.append(el)
                         }
                         }
-                    case .failure(let error):
-                        print(error)
+                    errorMessage = "successful"
+                    DispatchQueue.main.async {
+                        completion(loadedImages, true, errorMessage)
                     }
-            DispatchQueue.main.async {
-                completion(loadedImages)
-            }
+                    case .failure:
+                        DispatchQueue.main.async {
+                            completion(loadedImages, false, "Connection lost")
+                        }
+                    }
+        
         }
-    }
+   }
 }
 
 let imageCache = NSCache<NSString, UIImage>()
@@ -70,7 +87,6 @@ extension UIImageView {
     
         if let cachedImage = imageCache.object(forKey: url as NSString) {
             image = cachedImage
-            return
         }
         
         if let urlFinal = URL(string: url) {
@@ -78,7 +94,6 @@ extension UIImageView {
             let dataTask = session.dataTask(with: urlFinal) { (data, response, error) in
                 if let unwrappedError = error {
                     print(unwrappedError)
-                    return
                 }
                 
                 if let unwrappedData = data, let downloadedImage = UIImage(data: unwrappedData) {
